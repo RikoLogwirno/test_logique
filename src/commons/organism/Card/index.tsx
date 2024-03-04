@@ -31,14 +31,14 @@ const Card = (props: PropsType) => {
         />
         <div className="flex-1 flex flex-col justify-between">
           <div>
-            <span className={`${styles.artist}`}>Travie McCoy</span>
-            <p className={`${styles.title}`}>Rough Water (feat. Jason Mraz)</p>
+            <span className={`${styles.artist}`}>{props.artist}</span>
+            <p className={`${styles.title}`}>{props.title}</p>
           </div>
           <div className="flex justify-between">
-            <div className={`${styles.genre}`}>Pop</div>
+            <div className={`${styles.genre}`}>{props.genre}</div>
             <div className="flex items-center gap-3">
               <IconWrapper icon={CurrencyIcon} />
-              <span className={styles.currency}>1.29</span>
+              <span className={styles.currency}>{props.price}</span>
             </div>
           </div>
         </div>
