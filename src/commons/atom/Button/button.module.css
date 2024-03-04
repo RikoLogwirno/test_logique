@@ -12,6 +12,10 @@
   transition: all 0.2s;
 }
 
+.primary {
+  background-image: linear-gradient(98deg, #712bda, #a45deb);
+}
+
 .Search {
   font-family: Roboto;
   font-size: 14px;
