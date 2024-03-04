@@ -1,0 +1,14 @@
+.wrapper {
+  transition: all 0.2s;
+}
+
+.wrapper:active {
+  transform: scale(0.9);
+  transition: all 0.2s;
+}
+
+img.icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
