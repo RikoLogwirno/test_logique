@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 
 import { LogoImg } from "@/assets";
+import SearchSection from "@/commons/molecule/SearchSection";
 
 const Home = () => {
   return (
@@ -8,9 +10,8 @@ const Home = () => {
       <div className="flex flex-1 items-center justify-center">
         <Image className="logo" src={LogoImg} alt="logo" width={72.2} height={83.8} />
       </div>
-      <div className="flex flex-col ">
-        <input type="text" name="search_terms" id="search_terms" placeholder="Artist / Album / Title" />
-        <input type="button" value="Search" />
+      <div className="flex w-full">
+        <SearchSection onSearch={(v) => console.log(v)} />
       </div>
     </main>
   );
