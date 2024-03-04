@@ -14,8 +14,11 @@ const SearchPage = () => {
     []
   );
   const [limit, setLimit] = useState(10);
+  const [loading, setLoading] = useState(false);
 
   const getData = async () => {
+    if (loading) return;
+    setLoading(true);
     const res = await fetch(`https://itunes.apple.com/search?term=${slug}&limit=${limit}`);
     const datas = await res.json();
     setDatasItunes(
@@ -27,6 +30,7 @@ const SearchPage = () => {
         price: "1.29",
       }))
     );
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -44,7 +48,7 @@ const SearchPage = () => {
         <Card key={k} {...v} />
       ))}
       <div className="w-full flex flex-col px-5 mb-3">
-        <Button label="Load More" onClick={() => setLimit((p) => p + 10)} color="primary" />
+        <Button label={loading ? "Loading" : "Load More"} onClick={() => setLimit((p) => p + 10)} color="primary" />
       </div>
     </div>
   );
