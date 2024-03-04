@@ -18,12 +18,17 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+.bg {
+  background-image: linear-gradient(153deg, #712bda, #a45deb 100%);
+}
+
+img.logo {
+  width: 72.2px;
+  height: 83.8px;
+  margin: 0 103.8px 219.2px 104px;
+  object-fit: contain;
 }
 
 @layer utilities {
